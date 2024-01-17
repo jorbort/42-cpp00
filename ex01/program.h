@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   program.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorgebortolotti <jorgebortolotti@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/19 17:49:23 by jorgebortol       #+#    #+#             */
-/*   Updated: 2024/01/03 09:45:01 by jorgebortol      ###   ########.fr       */
+/*   Created: 2024/01/03 09:28:36 by jorgebortol       #+#    #+#             */
+/*   Updated: 2024/01/03 09:43:21 by jorgebortol      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "program.h"
+#ifndef PROGRAM_H
+# define PROGRAM_H
 
-int	main(int argc, char **argv)
-{
-	int i = 1;
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
+#include <string>
+#include <iostream>
 
-	if (argc == 1)
-	{
-		cout << "* LOUD AND UNBEARABLE NOISE *" << "\n";
-	}
-	else if (argc > 1)
-	{
-		while (argv[i])
-		{
-			for (size_t j = 0; argv[i][j] != '\0'; j++)
-					cout << (char)toupper(argv[i][j]);
-			cout << ' ';
-			i++;
-		}
-		cout << "\n";
-	}
-	return (0);
-}
+using namespace std;
+
+#endif

@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorgebortolotti <jorgebortolotti@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/19 17:49:23 by jorgebortol       #+#    #+#             */
-/*   Updated: 2024/01/03 09:45:01 by jorgebortol      ###   ########.fr       */
+/*   Created: 2023/12/27 18:16:56 by jorgebortol       #+#    #+#             */
+/*   Updated: 2024/01/03 09:43:27 by jorgebortol      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
+
 #include "program.h"
 
-int	main(int argc, char **argv)
+class Contact
 {
-	int i = 1;
+private:
+	string f_name;
+	string l_name;
+	string nickname;
+	string phone_number;
+	string darkest_secret;
+public:
+Contact(string f_name, string l_name, string nickname, string phone_number, string darkest_secret);
+~Contact();
+};
 
-	if (argc == 1)
-	{
-		cout << "* LOUD AND UNBEARABLE NOISE *" << "\n";
-	}
-	else if (argc > 1)
-	{
-		while (argv[i])
-		{
-			for (size_t j = 0; argv[i][j] != '\0'; j++)
-					cout << (char)toupper(argv[i][j]);
-			cout << ' ';
-			i++;
-		}
-		cout << "\n";
-	}
-	return (0);
-}
+
+#endif
