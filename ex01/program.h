@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   program.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jorgebortolotti <jorgebortolotti@studen    +#+  +:+       +#+        */
+/*   By: jbortolo <jbortolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 09:28:36 by jorgebortol       #+#    #+#             */
-/*   Updated: 2024/01/03 09:43:21 by jorgebortol      ###   ########.fr       */
+/*   Updated: 2024/01/17 18:04:40 by jbortolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,7 @@
 #include <iostream>
 
 using namespace std;
+
+void add_contact(PhoneBook *book);
 
 #endif

@@ -3,9 +3,11 @@
 #include "Contact.hpp"
 using namespace std;
 
+
 int	main(void)
 {
 	string input = " ";
+	PhoneBook book;
 
 	while (input != "exit")
 	{
@@ -14,7 +16,7 @@ int	main(void)
 		getline(cin,input);
 		if (input == "ADD")
 		{
-
+			add_contact(&book);
 		}
 		if (input == "SEARCH")
 		{
