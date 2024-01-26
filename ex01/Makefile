@@ -1,18 +1,23 @@
-NAME = Phonebook
-CFLAG = -Wall -Werror -Wextra -g -std=c++98
-SRC = main.cpp
+NAME = PhoneBook
+CFLAG = -Wall -Werror -Wextra -g -std=c++98 -fsanitize=address
+SRC = main.cpp Contact.cpp PhoneBook.cpp
 CC = c++
 OBJS = $(SRC:.cpp=.o)
 HEADER = program.h
 
 %.o: %.cpp
-	$(CC) $(CFLAG) -c $< -o $@
+	$(CC) -I. $(CFLAG) -c $< -o $@
 
-$(NAME): $(OBJS) $(HEADER)
+$(NAME): $(OBJS) 
 	$(CC) $(CFLAG) $(OBJS) -o $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	rm -f *.o
+
+git: fclean
+	git add *
+	git commit -m "auto commit"
+	git push
 
 fclean: clean
 	rm -f $(NAME)

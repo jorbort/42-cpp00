@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jorgebortolotti <jorgebortolotti@studen    +#+  +:+       +#+        */
+/*   By: jbortolo <jbortolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:16:56 by jorgebortol       #+#    #+#             */
-/*   Updated: 2024/01/03 09:43:27 by jorgebortol      ###   ########.fr       */
+/*   Updated: 2024/01/26 16:08:50 by jbortolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,24 @@
 # define CONTACT_HPP
 
 #include "program.h"
+#include <string>
+#include <iostream>
 
 class Contact
 {
 private:
-	string f_name;
-	string l_name;
-	string nickname;
-	string phone_number;
-	string darkest_secret;
+	std::string f_name;
+	std::string l_name;
+	std::string nickname;
+	std::string phone_number;
+	std::string darkest_secret;
+	int			id;
 public:
-Contact(string f_name, string l_name, string nickname, string phone_number, string darkest_secret);
+Contact(std::string f_name, std::string l_name, std::string nickname, std::string phone_number, std::string darkest_secret, int id);
+Contact(void);
 ~Contact();
+void	get_contact();
+void	set_id(int i);
 };
 
 

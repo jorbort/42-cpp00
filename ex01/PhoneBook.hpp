@@ -10,7 +10,9 @@ private:
 public:
 	PhoneBook();
 	~PhoneBook();
-	void	add_contact(PhoneBook *book);
+	void	add_contact();
+	void	rotate_list();
+	void	recount_ids();
 };
 
 #endif

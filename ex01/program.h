@@ -6,7 +6,7 @@
 /*   By: jbortolo <jbortolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 09:28:36 by jorgebortol       #+#    #+#             */
-/*   Updated: 2024/01/17 18:04:40 by jbortolo         ###   ########.fr       */
+/*   Updated: 2024/01/26 12:34:02 by jbortolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,5 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
-void add_contact(PhoneBook *book);
 
 #endif
