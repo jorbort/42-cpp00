@@ -21,15 +21,12 @@ int	main(void)
 		}
 		if (input == "SEARCH")
 		{
-			std::cout << "search" << std::endl;
-		}
-		if (input == "EXIT")
-		{
-			std::cout << "exit" << std::endl;
+			book.search_contact();
 		}
 		else
 		{
 			std::cout << "Please enter a valid option";
 		}
 	}
+	return (0);
 }

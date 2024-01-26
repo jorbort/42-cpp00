@@ -6,7 +6,7 @@
 /*   By: jbortolo <jbortolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:16:56 by jorgebortol       #+#    #+#             */
-/*   Updated: 2024/01/26 16:08:50 by jbortolo         ###   ########.fr       */
+/*   Updated: 2024/01/26 20:03:51 by jbortolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,13 @@ public:
 Contact(std::string f_name, std::string l_name, std::string nickname, std::string phone_number, std::string darkest_secret, int id);
 Contact(void);
 ~Contact();
-void	get_contact();
+std::string get_contact_fname(void);
+std::string get_contact_lname(void);
+std::string get_contact_n_name(void);
+std::string get_contact_phonen(void);
+int 	get_contact_id(void);
 void	set_id(int i);
+void	print_contact(void);
 };
 
 

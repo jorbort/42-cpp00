@@ -13,6 +13,7 @@ public:
 	void	add_contact();
 	void	rotate_list();
 	void	recount_ids();
+	void	search_contact();
 };
 
 #endif

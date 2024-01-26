@@ -17,7 +17,38 @@ Contact::~Contact()
 {
 
 }
+
+void Contact::print_contact(void)
+{
+	std::cout << this->f_name << std::endl;
+	std::cout << this->l_name << std::endl;
+	std::cout << this->nickname << std::endl;
+	std::cout << this->phone_number << std::endl;
+	std::cout << this->darkest_secret << std::endl;
+}	
 void Contact::set_id(int i)
 {
 	this->id = i;
+}
+std::string	Contact::get_contact_fname()
+{
+	return (this->f_name);
+}
+std::string	Contact::get_contact_lname()
+{
+	return (this->l_name);
+}
+
+std::string	Contact::get_contact_n_name()
+{
+	return (this->nickname);
+}
+std::string	Contact::get_contact_phonen()
+{
+	return (this->phone_number);
+}
+
+int	Contact::get_contact_id()
+{
+	return (this->id);
 }
