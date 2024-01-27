@@ -3,15 +3,49 @@
 
 PhoneBook::PhoneBook()
 {
+	this->len = 0;
 }
 
 PhoneBook::~PhoneBook()
 {
 }
 
+void  PhoneBook::search_contact()
+{
+	std::string u_input = "";
+	if (len == 0)
+	{
+		std::cout << "no contacts is your phonebook make some friends first" << std::endl;
+		return ;
+	}
+	std::cout << "************************************************" << std::endl;
+	for (int i = 0; i < len; i++)
+	{
+		std::cout << "*         ";
+		std::cout << contacts[i].get_contact_id() << "|" << " ";
+		format_print(contacts[i].get_contact_fname());
+		std::cout << "|" << " ";
+		format_print(contacts[i].get_contact_lname());
+		std::cout << "|" << " ";
+		format_print(contacts[i].get_contact_n_name());
+		std::cout << "*" << std::endl;
+	}
+	std::cout << "************************************************" << std::endl;
+	std::cout << "pick a contact id" << std::endl;
+	std::getline(std::cin, u_input);
+	for (int i = 0; i < len; i++)
+	{
+		if (std::to_string(contacts[i].get_contact_id()) == u_input)
+		{
+			contacts[i].print_contact();
+			return ;
+		}
+	}
+	std::cout << "invalid contact id" << std::endl;
+}
 void PhoneBook::recount_ids()
 {
-	for(int i = 0; i < 7; i++)
+	for(int i = 0; i < 8; i++)
 		contacts[i].set_id(i + 1);
 }
 
@@ -21,12 +55,12 @@ void PhoneBook::rotate_list()
 	int j = 0;
 
 	tmp[7] = contacts[0];
-	for (int i = 1 ; i < 6; i++)
+	for (int i = 1 ; i < 8; i++)
 	{
 		tmp[j] = contacts[i];
 		j++;
 	}
-	for (int i = 0; i < 7; i++)
+	for (int i = 0; i < 8; i++)
 		contacts[i] = tmp[i];
 	recount_ids();
 }
@@ -37,7 +71,7 @@ void PhoneBook::add_contact(void)
 	std::string u_input[5];
 	u_input[0] = "";
 
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i <= 4; i++)
 	{
 		switch (i)
 		{
@@ -88,8 +122,10 @@ void PhoneBook::add_contact(void)
 	if (id <= 7)
 	{
 		contacts[id] = Contact(u_input[0], u_input[1], u_input[2], u_input[3], u_input[4], id+1);
+		len += 1;
+		id++;
 	}
-	if (id > 7)
+	else if (id > 7)
 	{
 		contacts[0] = Contact(u_input[0], u_input[1], u_input[2], u_input[3], u_input[4], 1);
 		rotate_list();

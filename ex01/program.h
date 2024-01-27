@@ -6,7 +6,7 @@
 /*   By: jbortolo <jbortolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 09:28:36 by jorgebortol       #+#    #+#             */
-/*   Updated: 2024/01/26 12:34:02 by jbortolo         ###   ########.fr       */
+/*   Updated: 2024/01/27 15:03:28 by jbortolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,5 @@
 #include <iostream>
 
 
+void format_print(std::string s);
 #endif

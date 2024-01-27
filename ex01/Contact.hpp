@@ -6,7 +6,7 @@
 /*   By: jbortolo <jbortolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:16:56 by jorgebortol       #+#    #+#             */
-/*   Updated: 2024/01/26 20:03:51 by jbortolo         ###   ########.fr       */
+/*   Updated: 2024/01/27 14:52:13 by jbortolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ std::string get_contact_phonen(void);
 int 	get_contact_id(void);
 void	set_id(int i);
 void	print_contact(void);
+void	format_print(std::string s);	
 };
 
 
